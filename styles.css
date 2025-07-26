@@ -1,0 +1,170 @@
+/* Variables CSS */
+:root {
+    --sage: #9CAF88;
+    --deep-green: #2D5016;
+    --warm-beige: #F5F1E8;
+}
+
+/* Défilement fluide et marges de section */
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+/* Animations d'entrée optimisées */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform; /* Seulement sur éléments animés */
+}
+
+.animate-in {
+    opacity: 1;
+    transform: none;
+    will-change: auto; /* Libérer after animation */
+}
+
+/* Garder animate-pulse seulement (utilisé) */
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+
+
+
+
+/* Préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition: none !important;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    section[id] {
+        scroll-margin-top: 80px;
+    }
+}
+
+/* Styles de base */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--sage);
+}
+
+
+
+
+
+
+
+/* Scroll to top button */
+#scroll-to-top {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scroll-to-top.opacity-0 {
+    opacity: 0;
+}
+
+#scroll-to-top.pointer-events-none {
+    pointer-events: none;
+}
+
+/* Menu mobile */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+/* Images responsives */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Grilles responsives */
+.grid-responsive {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Styles ultra-discrets pour les liens IA */
+.ai-links-minimal {
+    border-top: 1px solid #e5e7eb;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.ai-link-discrete {
+    color: #9CA3AF;
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+
+.ai-link-discrete:hover {
+    color: #9CAF88;
+    transition: color 0.3s ease;
+}
+
+/* Utilitaires */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}

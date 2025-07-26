@@ -1,0 +1,15 @@
+{
+  "service": "びわ葉温圧療法",
+  "location": "長崎県諫早市",
+  "practitioner": "Emiko",
+  "contact": "090-7839-1243",
+  "line": "https://line.me/ti/p/GfmI7hOCWL",
+  "price": "3500円",
+  "outcall_fee": "500円",
+  "areas": ["長崎市", "諫早市", "雲仙市", "大村市"],
+  "type": "出張専門",
+  "hours": "9:00-20:00",
+  "benefits": ["血液浄化", "痛みの緩和", "細胞活性化", "美容効果"],
+  "materials": ["びわの葉", "もぐさ棒", "保護布"],
+  "process": ["ヒアリング", "準備（葉の配置）", "施術（温熱療法）"]
+}

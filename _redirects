@@ -1,0 +1,15 @@
+# Netlify redirects file
+
+# Redirect root to index.html (home page)
+/  /index.html  200
+
+# Page redirects - all redirect to single page
+/home  /index.html  200
+/about  /index.html  200
+/courses  /index.html  200
+/gallery  /index.html  200
+/access  /index.html  200
+/contact  /index.html  200
+
+# Handle 404s by redirecting to home
+/*  /index.html  404

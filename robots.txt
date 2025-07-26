@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Fichiers et dossiers à ne pas indexer
+Disallow: /netlify.toml
+Disallow: /.netlify/
+Disallow: /ai-summary.json
+
+# Sitemap (remplacez par votre vraie URL Netlify)
+Sitemap: https://VOTRE-SITE.netlify.app/sitemap.xml
