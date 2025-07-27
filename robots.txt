@@ -6,5 +6,5 @@ Disallow: /netlify.toml
 Disallow: /.netlify/
 Disallow: /ai-summary.json
 
-# Sitemap (remplacez par votre vraie URL Netlify)
-Sitemap: https://VOTRE-SITE.netlify.app/sitemap.xml
+# Sitemap (URL mise à jour)
+Sitemap: https://teate.netlify.app/sitemap.xml

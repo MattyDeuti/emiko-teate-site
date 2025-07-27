@@ -36,11 +36,12 @@ function initIntersectionObserver() {
                     const delay = parseInt(target.dataset.delay) || 0;
                     
                     setTimeout(() => {
-                        target.classList.add('animate-in');
-                        // Optimisation will-change - libérer après animation
-                        setTimeout(() => {
+                        // [MODIFIÉ] Solution plus robuste pour libérer will-change
+                        target.addEventListener('transitionend', () => {
                             target.style.willChange = 'auto';
-                        }, 700); // Durée de transition
+                        }, { once: true });
+                        
+                        target.classList.add('animate-in');
                     }, delay);
                 }
                 
@@ -150,8 +151,6 @@ function initStickyNavigation() {
     window.addEventListener('scroll', handleScroll, { passive: true });
 }
 
-
-
 // Gestion des erreurs d'images
 function initImageErrorHandling() {
     document.querySelectorAll('img').forEach(img => {
@@ -191,23 +190,19 @@ function initTreatmentCarousel() {
     
     // Fonction pour afficher une slide spécifique
     function showSlide(index) {
-        // Masquer toutes les slides
         slides.forEach(slide => {
             slide.style.opacity = '0';
         });
         
-        // Réinitialiser tous les indicateurs
         indicators.forEach(indicator => {
             indicator.classList.remove('bg-white/80');
             indicator.classList.add('bg-white/50');
         });
         
-        // Afficher la slide courante
         if (slides[index]) {
             slides[index].style.opacity = '1';
         }
         
-        // Activer l'indicateur correspondant
         if (indicators[index]) {
             indicators[index].classList.remove('bg-white/50');
             indicators[index].classList.add('bg-white/80');
@@ -230,7 +225,8 @@ function initTreatmentCarousel() {
     
     // Démarrer le défilement automatique
     function startAutoSlide() {
-        autoSlideInterval = setInterval(nextSlide, 1500); // Change toutes les 1,5 secondes
+        // [MODIFIÉ] Durée du carrousel changée à 2.5 secondes
+        autoSlideInterval = setInterval(nextSlide, 2500); 
     }
     
     // Arrêter le défilement automatique
@@ -246,7 +242,6 @@ function initTreatmentCarousel() {
         prevBtn.addEventListener('click', () => {
             stopAutoSlide();
             prevSlide();
-            // Redémarrer l'auto-slide après 6 secondes d'inactivité
             setTimeout(startAutoSlide, 6000);
         });
     }
@@ -255,7 +250,6 @@ function initTreatmentCarousel() {
         nextBtn.addEventListener('click', () => {
             stopAutoSlide();
             nextSlide();
-            // Redémarrer l'auto-slide après 6 secondes d'inactivité
             setTimeout(startAutoSlide, 6000);
         });
     }
@@ -265,24 +259,18 @@ function initTreatmentCarousel() {
         indicator.addEventListener('click', () => {
             stopAutoSlide();
             showSlide(index);
-            // Redémarrer l'auto-slide après 6 secondes d'inactivité
             setTimeout(startAutoSlide, 6000);
         });
     });
     
-    // Pause au survol du carrousel
     carousel.addEventListener('mouseenter', stopAutoSlide);
     carousel.addEventListener('mouseleave', startAutoSlide);
-    
-    // Pause lors du focus clavier
     carousel.addEventListener('focusin', stopAutoSlide);
     carousel.addEventListener('focusout', startAutoSlide);
     
-    // Initialiser le carrousel
     showSlide(0);
     startAutoSlide();
     
-    // Gestion du clavier pour l'accessibilité
     carousel.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
             e.preventDefault();
@@ -298,11 +286,8 @@ function initTreatmentCarousel() {
     });
 }
 
-
-
 // Initialisation globale
 function init() {
-    // Attendre que le DOM soit chargé
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
         return;
@@ -318,7 +303,8 @@ function init() {
         updateCopyrightYear();
         initTreatmentCarousel();
         
-        console.log('Application initialisée avec succès');
+        // [MODIFIÉ] console.log retiré ou commenté
+        // console.log('Application initialisée avec succès');
     } catch (error) {
         console.error('Erreur lors de l\'initialisation:', error);
     }
@@ -330,9 +316,9 @@ function initAITracking() {
     aiLinks.forEach(link => {
         link.addEventListener('click', function() {
             const platform = this.textContent.trim();
-            console.log(`AI Platform clicked: ${platform}`);
+            // [MODIFIÉ] console.log retiré ou commenté
+            // console.log(`AI Platform clicked: ${platform}`);
             
-            // Google Analytics si présent
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'ai_analysis', {
                     'platform': platform,
