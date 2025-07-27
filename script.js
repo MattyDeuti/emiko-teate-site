@@ -25,18 +25,15 @@ function initIntersectionObserver() {
             if (entry.isIntersecting) {
                 const target = entry.target;
                 
-                // Gestion du lazy loading des images
                 if (target.dataset.src) {
                     target.src = target.dataset.src;
                     target.removeAttribute('data-src');
                 }
                 
-                // Gestion uniforme des animations
                 if (target.dataset.animate !== undefined) {
                     const delay = parseInt(target.dataset.delay) || 0;
                     
                     setTimeout(() => {
-                        // [MODIFIÉ] Solution plus robuste pour libérer will-change
                         target.addEventListener('transitionend', () => {
                             target.style.willChange = 'auto';
                         }, { once: true });
@@ -53,7 +50,6 @@ function initIntersectionObserver() {
         rootMargin: '50px'
     });
     
-    // Observer seulement les éléments avec data-animate et images
     document.querySelectorAll('[data-animate], img[data-src]').forEach(el => {
         observer.observe(el);
     });
@@ -92,7 +88,6 @@ function initMobileMenu() {
         mobileMenuButton.setAttribute('aria-expanded', open.toString());
         document.body.style.overflow = open ? 'hidden' : '';
         
-        // Gestion du focus pour l'accessibilité
         if (open) {
             const firstFocusable = mobileMenu.querySelector('a, button');
             if (firstFocusable) {
@@ -106,7 +101,6 @@ function initMobileMenu() {
         toggleMenu(!isOpen);
     });
     
-    // Fermer le menu avec Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
             toggleMenu(false);
@@ -114,7 +108,6 @@ function initMobileMenu() {
         }
     });
     
-    // Fermer le menu en cliquant sur les liens
     mobileMenu.addEventListener('click', (e) => {
         if (e.target.tagName === 'A') {
             toggleMenu(false);
@@ -186,9 +179,9 @@ function initTreatmentCarousel() {
     if (slides.length === 0) return;
     
     let currentSlide = 0;
-    let autoSlideInterval;
+    // [CORRIGÉ] Initialisation à null pour une vérification plus fiable.
+    let autoSlideInterval = null;
     
-    // Fonction pour afficher une slide spécifique
     function showSlide(index) {
         slides.forEach(slide => {
             slide.style.opacity = '0';
@@ -211,25 +204,17 @@ function initTreatmentCarousel() {
         currentSlide = index;
     }
     
-    // Fonction pour passer à la slide suivante
     function nextSlide() {
         const next = (currentSlide + 1) % slides.length;
         showSlide(next);
     }
     
-    // Fonction pour passer à la slide précédente
     function prevSlide() {
         const prev = (currentSlide - 1 + slides.length) % slides.length;
         showSlide(prev);
     }
     
-    // Démarrer le défilement automatique
-    function startAutoSlide() {
-        // [MODIFIÉ] Durée du carrousel changée à 2.5 secondes
-        autoSlideInterval = setInterval(nextSlide, 2500); 
-    }
-    
-    // Arrêter le défilement automatique
+    // [CORRIGÉ] La fonction stop est plus robuste.
     function stopAutoSlide() {
         if (autoSlideInterval) {
             clearInterval(autoSlideInterval);
@@ -237,30 +222,31 @@ function initTreatmentCarousel() {
         }
     }
     
-    // Événements pour les boutons de navigation
+    // [CORRIGÉ] La fonction start vérifie si un minuteur est déjà actif.
+    function startAutoSlide() {
+        stopAutoSlide(); // Sécurité supplémentaire : on arrête tout avant de commencer.
+        if (!autoSlideInterval) {
+            autoSlideInterval = setInterval(nextSlide, 2500);
+        }
+    }
+
+    // [CORRIGÉ] La logique de redémarrage est simplifiée et plus sûre.
+    function handleUserInteraction(action) {
+        stopAutoSlide();
+        action();
+        setTimeout(startAutoSlide, 6000); // Redémarre après 6s d'inactivité.
+    }
+    
     if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            stopAutoSlide();
-            prevSlide();
-            setTimeout(startAutoSlide, 6000);
-        });
+        prevBtn.addEventListener('click', () => handleUserInteraction(prevSlide));
     }
     
     if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            stopAutoSlide();
-            nextSlide();
-            setTimeout(startAutoSlide, 6000);
-        });
+        nextBtn.addEventListener('click', () => handleUserInteraction(nextSlide));
     }
     
-    // Événements pour les indicateurs
     indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            stopAutoSlide();
-            showSlide(index);
-            setTimeout(startAutoSlide, 6000);
-        });
+        indicator.addEventListener('click', () => handleUserInteraction(() => showSlide(index)));
     });
     
     carousel.addEventListener('mouseenter', stopAutoSlide);
@@ -268,22 +254,19 @@ function initTreatmentCarousel() {
     carousel.addEventListener('focusin', stopAutoSlide);
     carousel.addEventListener('focusout', startAutoSlide);
     
-    showSlide(0);
-    startAutoSlide();
-    
     carousel.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
             e.preventDefault();
-            stopAutoSlide();
-            prevSlide();
-            setTimeout(startAutoSlide, 6000);
+            handleUserInteraction(prevSlide);
         } else if (e.key === 'ArrowRight') {
             e.preventDefault();
-            stopAutoSlide();
-            nextSlide();
-            setTimeout(startAutoSlide, 6000);
+            handleUserInteraction(nextSlide);
         }
     });
+
+    // Initialisation
+    showSlide(0);
+    startAutoSlide();
 }
 
 // Initialisation globale
@@ -302,9 +285,6 @@ function init() {
         initImageErrorHandling();
         updateCopyrightYear();
         initTreatmentCarousel();
-        
-        // [MODIFIÉ] console.log retiré ou commenté
-        // console.log('Application initialisée avec succès');
     } catch (error) {
         console.error('Erreur lors de l\'initialisation:', error);
     }
@@ -316,8 +296,6 @@ function initAITracking() {
     aiLinks.forEach(link => {
         link.addEventListener('click', function() {
             const platform = this.textContent.trim();
-            // [MODIFIÉ] console.log retiré ou commenté
-            // console.log(`AI Platform clicked: ${platform}`);
             
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'ai_analysis', {
@@ -332,7 +310,6 @@ function initAITracking() {
 // Démarrage de l'application
 init();
 
-// Initialiser le tracking IA après le chargement
 document.addEventListener('DOMContentLoaded', function() {
     initAITracking();
 });
