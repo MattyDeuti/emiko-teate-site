@@ -230,6 +230,7 @@
                     <div class="ml-10 flex items-baseline space-x-8" role="menubar">
                         <a href="#home" class="text-sage font-semibold" role="menuitem" aria-current="page">ホーム</a>
                         <a href="#about" class="text-deep-green hover:text-sage transition duration-300" role="menuitem">こんな方に</a>
+                        <a href="#course" class="text-deep-green hover:text-sage transition duration-300" role="menuitem">施術コース</a>
                         <a href="#flow" class="text-deep-green hover:text-sage transition duration-300" role="menuitem">施術の流れ</a>
                         <a href="#salon" class="text-deep-green hover:text-sage transition duration-300" role="menuitem">サロン情報</a>
                         <a href="#contact" class="text-deep-green hover:text-sage transition duration-300" role="menuitem">お問い合わせ</a>
@@ -249,6 +250,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
                 <a href="#home" class="block px-3 py-2 text-sage font-semibold">ホーム</a>
                 <a href="#about" class="block px-3 py-2 text-deep-green hover:text-sage">こんな方に</a>
+                <a href="#course" class="block px-3 py-2 text-deep-green hover:text-sage">施術コース</a>
                 <a href="#flow" class="block px-3 py-2 text-deep-green hover:text-sage">施術の流れ</a>
                 <a href="#salon" class="block px-3 py-2 text-deep-green hover:text-sage">サロン情報</a>
                 <a href="#contact" class="block px-3 py-2 text-deep-green hover:text-sage">お問い合わせ</a>
@@ -387,24 +389,25 @@
                             <h3 class="text-xl font-bold text-deep-green mb-3">リラクゼーション</h3>
                             <p class="text-gray-700">よもぎの香りは神経を休める効果があり、自律神経を整えてくれます。</p>
                         </div>
-                        <div class="pt-6">
-                            <div class="text-center mb-6">
-                                <h4 class="text-xl font-bold text-deep-green mb-2">自然の力への信念</h4>
-                            </div>
-                            
-                            <blockquote class="text-center space-y-4">
-                                <p class="text-lg text-deep-green font-medium leading-relaxed italic">
-                                    びわの葉温灸で使用する材料はすべて自然界にあるもので、副作用の心配はありません。枇杷の葉の成分を身体に直接浸透させることで自然治癒力・免疫力を引き出していきます。
-                                </p>
-                                <p class="text-lg text-deep-green font-medium leading-relaxed italic border-t border-sage/30 pt-4">
-                                    人間は自然界に生きる存在。自然から遠ざかると不調になると言われています。
-                                </p>
-                            </blockquote>
-                        </div>
                     </div>
                 </div>
                 <div class="relative">
                     <img src="images/plantes.webp" alt="よもぎとびわの葉 - 自然療法に使用される薬草素材" class="rounded-2xl shadow-lg w-full" loading="lazy" decoding="async" width="600" height="400">
+                </div>
+            </div>
+            
+            <!-- 自然の力への信念 Section -->
+            <div class="mt-16 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h4 class="text-2xl font-bold text-deep-green mb-8">自然の力への信念</h4>
+                    <div class="space-y-6">
+                        <p class="text-lg text-deep-green font-medium leading-relaxed">
+                            びわの葉温灸で使用する材料はすべて自然界にあるもので、副作用の心配はありません。枇杷の葉の成分を身体に直接浸透させることで自然治癒力・免疫力を引き出していきます。
+                        </p>
+                        <p class="text-lg text-deep-green font-medium leading-relaxed border-t border-sage/30 pt-6">
+                            人間は自然界に生きる存在。自然から遠ざかると不調になると言われています。
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -439,9 +442,9 @@
     <section id="about" class="py-20 bg-gradient-to-br from-soft-pink to-warm-beige" role="region" aria-labelledby="about-title">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 id="about-title" class="text-3xl md:text-4xl font-bold text-deep-green mb-4">こんな方に来て欲しい</h2>
+                <h2 id="about-title" class="text-3xl md:text-4xl font-bold text-deep-green mb-4">こんな方ご相談ください</h2>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
                 <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300" data-animate data-delay="0">
                     <div class="mb-4">
                         <img src="images/icon-pain-relief.svg" alt="慢性的な肩こり・腰痛の緩和アイコン" class="w-12 h-12 mx-auto" loading="lazy" decoding="async" width="48" height="48">
@@ -458,9 +461,9 @@
                 </div>
                 <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300" data-animate data-delay="200">
                     <div class="mb-4">
-                        <img src="images/icon-self-care.svg" alt="病院に頼らないセルフケアのアイコン" class="w-12 h-12 mx-auto" loading="lazy" decoding="async" width="48" height="48">
-                    </div>
-                    <h3 class="text-lg font-bold text-deep-green mb-2">病院に頼らないセルフケア</h3>
+                        <img src="images/icon-self-care.svg" alt="薬に頼らないセルフケアのアイコン" class="w-12 h-12 mx-auto" loading="lazy" decoding="async" width="48" height="48">
+                </div>
+                <h3 class="text-lg font-bold text-deep-green mb-2">薬に頼らないセルフケア</h3>
                     <p class="text-gray-600">を求めている方</p>
                 </div>
                 <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300" data-animate data-delay="300">
@@ -470,12 +473,44 @@
                     <h3 class="text-lg font-bold text-deep-green mb-2">リラックスや心の落ち着き</h3>
                     <p class="text-gray-600">を感じたい方</p>
                 </div>
+                <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300" data-animate data-delay="400">
+                    <div class="mb-4">
+                        <img src="images/icon-women-health.svg" alt="女性のお悩みや不眠などのアイコン" class="w-12 h-12 mx-auto" loading="lazy" decoding="async" width="48" height="48">
+                    </div>
+                    <h3 class="text-lg font-bold text-deep-green mb-2">女性のお悩みや不眠など</h3>
+                    <p class="text-gray-600">に悩んでいる方</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 施術コース Section -->
+    <section id="course" class="py-20 bg-white" role="region" aria-labelledby="course-title">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 id="course-title" class="text-3xl md:text-4xl font-bold text-deep-green mb-8">施術コース</h2>
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-8 rounded-2xl" data-animate data-delay="0">
+                        <div class="text-center space-y-4">
+                            <h3 class="text-2xl md:text-3xl font-bold text-deep-green mb-4">びわ葉温圧セッション</h3>
+                            <div class="bg-white/80 rounded-xl p-6 space-y-3">
+                                <p class="text-3xl md:text-4xl font-bold text-sage">60分 3,500円</p>
+                                <p class="text-lg text-gray-700">ゆっくりとした時間の中で、びわの葉の温かさと自然の力を体感していただけます。</p>
+                            </div>
+                            <div class="bg-sage/20 rounded-xl p-4 mt-4">
+                                <p class="text-lg font-semibold text-deep-green mb-2">🚗 出張サービス</p>
+                                <p class="text-gray-700">ご自宅での施術も承ります</p>
+                                <p class="text-sm text-gray-600">出張費：500円（長崎、諫早、雲仙、大村市）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- 施術の流れ Section -->
-    <section id="flow" class="py-20 bg-white" role="region" aria-labelledby="flow-title">
+    <section id="flow" class="py-20 bg-gradient-to-br from-soft-pink to-warm-beige" role="region" aria-labelledby="flow-title">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 id="flow-title" class="text-3xl md:text-4xl font-bold text-deep-green mb-4">施術の流れ</h2>
@@ -519,7 +554,7 @@
     </section>
 
     <!-- サロン情報 Section -->
-    <section id="salon" class="py-20 bg-gradient-to-br from-soft-pink to-warm-beige" role="region" aria-labelledby="salon-title">
+    <section id="salon" class="py-20 bg-white" role="region" aria-labelledby="salon-title">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 id="salon-title" class="text-3xl md:text-4xl font-bold text-deep-green mb-4">サロン情報</h2>
@@ -566,7 +601,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white" role="region" aria-labelledby="contact-title">
+    <section id="contact" class="py-20 bg-gradient-to-br from-soft-pink to-warm-beige" role="region" aria-labelledby="contact-title">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 id="contact-title" class="text-3xl md:text-4xl font-bold text-deep-green mb-4">お問い合わせ</h2>
@@ -590,11 +625,7 @@
                             </a>
                             <p class="text-gray-600 text-sm mt-2">24時間受付可能（返信は営業時間内）</p>
                         </div>
-                        <div class="bg-sage/10 p-6 rounded-2xl">
-                            <h3 class="text-xl font-bold text-deep-green mb-3">🚗 出張エリア</h3>
-                            <p class="text-gray-700">長崎、諫早、雲仙、大村市</p>
-                            <p class="text-sm text-gray-600 mt-2">出張費：500円</p>
-                        </div>
+
                     </div>
                 </div>
             </div>
