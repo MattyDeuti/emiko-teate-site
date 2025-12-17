@@ -1,0 +1,22 @@
+{
+  "name": "びわ葉温圧 手あて",
+  "short_name": "手あて",
+  "description": "長崎県諫早市を拠点としたびわ葉温圧療法サロン",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F1EB",
+  "theme_color": "#9CAF88",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

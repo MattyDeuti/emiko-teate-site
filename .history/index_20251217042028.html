@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>びわ葉温圧 手あて - 長崎県諫早市 | 日本伝統療法で自然治癒力向上</title>
     <meta name="description" content="長崎県諫早市のびわ葉温圧サロン。日本古来の伝統療法で慢性的な肩こり・腰痛を改善。自然の力で心と身体を整える優しい施術。出張施術も承ります。">
-    
+
     <!-- Préchargement critique -->
     <link rel="preload" as="image" href="images/header.webp" fetchpriority="high">
     <meta name="keywords" content="びわ葉温圧,手あて,諫早市,長崎,自然療法,伝統療法,肩こり,腰痛,出張施術,もぐさ棒">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://teate.netlify.app/">
-    
+
+    <!-- Favicons Multi-Plateforme -->
+    <link rel="icon" type="image/webp" href="images/logo.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.webp">
+    <link rel="apple-touch-icon" href="images/logo.webp">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#9CAF88">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="びわ葉温圧 手あて｜長崎県諫早市の日本伝統療法">
     <meta property="og:description" content="自然の力で心と身体を整える優しい施術。長崎・諫早・雲仙・大村へ出張可。">
-    <meta property="og:image" content="https://teate.netlify.app/images/og-image.jpg">
     <meta property="og:url" content="https://teate.netlify.app/">
-    
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://teate.netlify.app/images/logo.webp">
+
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="びわ葉温圧 手あて｜長崎県諫早市">
+    <meta name="twitter:description" content="自然の力で心と身体を整える優しい施術">
+    <meta name="twitter:image" content="https://teate.netlify.app/images/logo.webp">
+
     <!-- Preconnect pour les performances -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    
+
     <!-- TAILWIND CSS EN PREMIER (non différé pour éviter les problèmes) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -84,9 +96,12 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0.7;
             }
@@ -99,11 +114,11 @@
                 animation-iteration-count: 1 !important;
                 transition: none !important;
             }
-            
+
             html {
                 scroll-behavior: smooth;
             }
-            
+
             section[id] {
                 scroll-margin-top: 80px;
             }
@@ -247,12 +262,12 @@
             const link = document.createElement('link');
             link.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;700&display=swap';
             link.rel = 'stylesheet';
-            link.onload = function() {
+            link.onload = function () {
                 document.documentElement.classList.add('fonts-loaded');
             };
             document.head.appendChild(link);
         }
-        
+
         // Charger les polices après que le DOM soit prêt
         if (document.readyState === 'complete') {
             loadGoogleFonts();
@@ -260,13 +275,13 @@
             window.addEventListener('load', loadGoogleFonts);
         }
     </script>
-    
+
     <!-- Métadonnées spécifiques aux IA -->
     <meta name="ai-content-type" content="traditional-therapy">
     <meta name="ai-summary" content="びわ葉温圧療法 長崎県諫早市 自然治癒力向上 慢性痛改善">
     <meta name="ai-keywords" content="びわ葉温圧,日本伝統療法,長崎,諫早,自然療法">
     <meta name="ai-target" content="chronic-pain-relief,natural-healing,traditional-medicine">
-    
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -276,6 +291,8 @@
           "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
           "@id": "#business",
           "name": "びわ葉温圧 手あて",
+          "url": "https://teate.netlify.app/",
+          "image": "https://teate.netlify.app/images/logo.webp",
           "description": "長崎県諫早市を拠点とした出張専門のびわ葉温圧療法。お客様のご自宅で伝統的な自然療法による痛みの緩和と体質改善を提供。",
           "telephone": "+81-90-7839-1243",
           "founder": {
@@ -283,10 +300,17 @@
             "name": "Emiko",
             "description": "東京から長崎に移住した経験豊富なびわ葉温圧セラピスト"
           },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 32.8771995,
+            "longitude": 130.0955522
+          },
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "白浜町31-1",
             "addressLocality": "諫早市",
             "addressRegion": "長崎県",
+            "postalCode": "854-0000",
             "addressCountry": "JP"
           },
           "areaServed": [
@@ -294,6 +318,10 @@
             "諫早市",
             "雲仙市",
             "大村市"
+          ],
+          "sameAs": [
+            "https://www.instagram.com/teate1017",
+            "https://line.me/R/ti/p/@738ffexe"
           ],
           "openingHours": [
             "Mo 09:00-20:00",
@@ -424,36 +452,46 @@
     }
     </script>
 </head>
+
 <body class="bg-warm-beige text-gray-800">
     <!-- Skip Link pour l'accessibilité -->
-    <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-white text-deep-green p-3 rounded-lg z-50 shadow-lg border border-sage">
+    <a href="#home"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-white text-deep-green p-3 rounded-lg z-50 shadow-lg border border-sage">
         メインコンテンツへスキップ
     </a>
-    
+
     <!-- Navigation -->
     <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50" role="navigation" aria-label="メインナビゲーション">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
                     <a href="#home" class="flex items-center hover:opacity-80 transition-opacity duration-300">
-                        <img src="images/logo.webp" alt="びわ葉温圧 手あて" class="h-10 w-10 rounded-full mr-3" width="40" height="40">
+                        <img src="images/logo.webp" alt="びわ葉温圧 手あて" class="h-10 w-10 rounded-full mr-3" width="40"
+                            height="40">
                         <span class="text-xl font-bold text-deep-green" aria-label="サイトロゴ">びわ葉温圧 手あて</span>
                     </a>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8" role="menubar">
                         <a href="#home" class="text-sage font-semibold" role="menuitem" aria-current="page">ホーム</a>
-                        <a href="#about" class="text-deep-green hover:text-sage transition duration-300" role="menuitem">こんな方に</a>
-                        <a href="#course" class="text-deep-green hover:text-sage transition duration-300" role="menuitem">施術コース</a>
-                        <a href="#flow" class="text-deep-green hover:text-sage transition duration-300" role="menuitem">施術の流れ</a>
-                        <a href="#salon" class="text-deep-green hover:text-sage transition duration-300" role="menuitem">サロン情報</a>
-                        <a href="#contact" class="text-deep-green hover:text-sage transition duration-300" role="menuitem">お問い合わせ</a>
+                        <a href="#about" class="text-deep-green hover:text-sage transition duration-300"
+                            role="menuitem">こんな方に</a>
+                        <a href="#course" class="text-deep-green hover:text-sage transition duration-300"
+                            role="menuitem">施術コース</a>
+                        <a href="#flow" class="text-deep-green hover:text-sage transition duration-300"
+                            role="menuitem">施術の流れ</a>
+                        <a href="#salon" class="text-deep-green hover:text-sage transition duration-300"
+                            role="menuitem">サロン情報</a>
+                        <a href="#contact" class="text-deep-green hover:text-sage transition duration-300"
+                            role="menuitem">お問い合わせ</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-deep-green hover:text-sage" aria-expanded="false" aria-controls="mobile-menu">
+                    <button id="mobile-menu-button" class="text-deep-green hover:text-sage" aria-expanded="false"
+                        aria-controls="mobile-menu">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
@@ -478,10 +516,9 @@
         <div class="header-image-container relative pt-16">
             <picture>
                 <source srcset="images/header.webp" type="image/webp">
-                <img src="images/header.jpg" alt="びわ葉温圧 手あて - 自然治癒力を高める日本伝統療法" 
-                     class="w-full h-48 md:h-56 lg:h-[28rem] object-cover object-center" 
-                     width="1200" height="400" 
-                     fetchpriority="high">
+                <img src="images/header.jpg" alt="びわ葉温圧 手あて - 自然治癒力を高める日本伝統療法"
+                    class="w-full h-48 md:h-56 lg:h-[28rem] object-cover object-center" width="1200" height="400"
+                    fetchpriority="high">
             </picture>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20"></div>
         </div>
@@ -497,8 +534,10 @@
                         <p class="text-xl text-gray-700 mb-8 text-center lg:text-left">
                             自然の力で心と身体を整える優しい施術
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-animate data-delay="300">
-                            <a href="#contact" class="bg-gradient-to-r from-sage to-deep-green text-white font-bold py-4 px-8 rounded-full hover:from-deep-green hover:to-sage transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-center">
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-animate
+                            data-delay="300">
+                            <a href="#contact"
+                                class="bg-gradient-to-r from-sage to-deep-green text-white font-bold py-4 px-8 rounded-full hover:from-deep-green hover:to-sage transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-center">
                                 ご予約・お問い合わせ
                             </a>
                         </div>
@@ -508,39 +547,58 @@
                         <div class="relative z-10 overflow-hidden rounded-3xl shadow-2xl">
                             <div id="treatment-carousel" class="relative w-full h-[300px] sm:h-[400px] lg:h-[450px]">
                                 <!-- Image 1 -->
-                                <div class="carousel-slide absolute inset-0 opacity-100 transition-opacity duration-500">
-                                    <img src="images/biwa-treatment.webp" alt="びわ葉温圧の施術風景 - リラックスした患者さんにびわの葉とモグサ棒で温圧治療" class="w-full h-full object-cover" width="800" height="450">
+                                <div
+                                    class="carousel-slide absolute inset-0 opacity-100 transition-opacity duration-500">
+                                    <img src="images/biwa-treatment.webp" alt="びわ葉温圧の施術風景 - リラックスした患者さんにびわの葉とモグサ棒で温圧治療"
+                                        class="w-full h-full object-cover" width="800" height="450">
                                 </div>
                                 <!-- Image 2 -->
                                 <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-500">
-                                    <img src="images/biwa_treatment_2.webp" alt="びわ葉温圧の施術風景 - 施術の詳細な様子" class="w-full h-full object-cover" width="800" height="450" loading="lazy">
+                                    <img src="images/biwa_treatment_2.webp" alt="びわ葉温圧の施術風景 - 施術の詳細な様子"
+                                        class="w-full h-full object-cover" width="800" height="450" loading="lazy">
                                 </div>
                                 <!-- Image 3 -->
                                 <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-500">
-                                    <img src="images/biwa_treatment_3.webp" alt="びわ葉温圧の施術風景 - 施術環境とリラックス効果" class="w-full h-full object-cover" width="800" height="450" loading="lazy">
+                                    <img src="images/biwa_treatment_3.webp" alt="びわ葉温圧の施術風景 - 施術環境とリラックス効果"
+                                        class="w-full h-full object-cover" width="800" height="450" loading="lazy">
                                 </div>
-                                
+
                                 <!-- Flèches de navigation -->
-                                <button id="prev-btn" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-deep-green p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-20">
-                                    <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                <button id="prev-btn"
+                                    class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-deep-green p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-20">
+                                    <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7"></path>
                                     </svg>
                                 </button>
-                                <button id="next-btn" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-deep-green p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-20">
-                                    <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                <button id="next-btn"
+                                    class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-deep-green p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-20">
+                                    <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </button>
-                                
+
                                 <!-- Indicateurs -->
-                                <div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
-                                    <button class="carousel-indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/80 hover:bg-white transition-all duration-300" data-slide="0"></button>
-                                    <button class="carousel-indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" data-slide="1"></button>
-                                    <button class="carousel-indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" data-slide="2"></button>
+                                <div
+                                    class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+                                    <button
+                                        class="carousel-indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/80 hover:bg-white transition-all duration-300"
+                                        data-slide="0"></button>
+                                    <button
+                                        class="carousel-indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300"
+                                        data-slide="1"></button>
+                                    <button
+                                        class="carousel-indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300"
+                                        data-slide="2"></button>
                                 </div>
                             </div>
                         </div>
-                        <div class="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-sage/20 to-deep-green/20 rounded-3xl"></div>
+                        <div
+                            class="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-sage/20 to-deep-green/20 rounded-3xl">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -551,7 +609,8 @@
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-animate data-delay="0">
-                <h2 class="text-3xl md:text-4xl font-bold text-deep-green mb-4">🌿 びわの葉温灸とは</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-deep-green mb-4"><span aria-hidden="true">🌿</span>
+                    びわの葉温灸とは</h2>
             </div>
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div data-animate data-delay="100">
@@ -560,7 +619,8 @@
                     </p>
                 </div>
                 <div class="relative" data-animate data-delay="200">
-                    <img src="images/materiel.webp" alt="びわ葉温圧の道具一式：新鮮なびわの葉、もぐさ棒、保護用の布" class="rounded-2xl shadow-lg w-full" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="images/materiel.webp" alt="びわ葉温圧の道具一式：新鮮なびわの葉、もぐさ棒、保護用の布"
+                        class="rounded-2xl shadow-lg w-full" loading="lazy" decoding="async" width="600" height="400">
                 </div>
             </div>
         </div>
@@ -570,12 +630,14 @@
     <section class="py-20 bg-gradient-to-br from-soft-pink to-warm-beige">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-deep-green mb-4">🌿 びわの葉の効能</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-deep-green mb-4"><span aria-hidden="true">🌿</span>
+                    びわの葉の効能</h2>
             </div>
             <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg mb-16">
                 <div class="space-y-6">
                     <div>
-                        <p class="text-gray-700 mb-6">びわの木は【薬王大樹】と言われ、あらゆる病を治すと代替療法として昔から使用されていました。中でもアミグダリンが細胞を活性化、鎮痛・殺菌・制がん作用に効果を発揮してくれます。</p>
+                        <p class="text-gray-700 mb-6">
+                            びわの木は【薬王大樹】と言われ、あらゆる病を治すと代替療法として昔から使用されていました。中でもアミグダリンが細胞を活性化、鎮痛・殺菌・制がん作用に効果を発揮してくれます。</p>
                     </div>
                     <div>
                         <h3 class="text-xl font-bold text-deep-green mb-3">血液浄化</h3>
@@ -587,10 +649,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mb-16">
-                 <h2 class="text-3xl md:text-4xl font-bold text-deep-green mb-4">🌿 モグサ棒について</h2>
-             </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-deep-green mb-4">🌿 モグサ棒について</h2>
+            </div>
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
                     <div class="space-y-6">
@@ -609,10 +671,11 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="images/plantes.webp" alt="よもぎとびわの葉 - 自然療法に使用される薬草素材" class="rounded-2xl shadow-lg w-full" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="images/plantes.webp" alt="よもぎとびわの葉 - 自然療法に使用される薬草素材" class="rounded-2xl shadow-lg w-full"
+                        loading="lazy" decoding="async" width="600" height="400">
                 </div>
             </div>
-            
+
             <!-- 自然の力への信念 Section -->
             <div class="mt-16 text-center">
                 <div class="max-w-4xl mx-auto">
@@ -634,7 +697,8 @@
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-deep-green mb-4">🚗 出張施術について</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-deep-green mb-4"><span aria-hidden="true">🚗</span>
+                    出張施術について</h2>
             </div>
             <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
                 <div class="space-y-6">
@@ -656,43 +720,54 @@
     </section>
 
     <!-- Section こんな方に来て欲しい -->
-    <section id="about" class="py-20 bg-gradient-to-br from-soft-pink to-warm-beige" role="region" aria-labelledby="about-title">
+    <section id="about" class="py-20 bg-gradient-to-br from-soft-pink to-warm-beige" role="region"
+        aria-labelledby="about-title">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 id="about-title" class="text-3xl md:text-4xl font-bold text-deep-green mb-4">こんな方ご相談ください</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-                <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300" data-animate data-delay="0">
+                <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300"
+                    data-animate data-delay="0">
                     <div class="mb-4">
-                        <img src="images/icon-pain-relief.svg" alt="慢性的な肩こり・腰痛の緩和アイコン" class="w-12 h-12 mx-auto" loading="lazy" decoding="async" width="48" height="48">
+                        <img src="images/icon-pain-relief.svg" alt="慢性的な肩こり・腰痛の緩和アイコン" class="w-12 h-12 mx-auto"
+                            loading="lazy" decoding="async" width="48" height="48">
                     </div>
                     <h3 class="text-lg font-bold text-deep-green mb-2">慢性的な肩こり・腰痛</h3>
                     <p class="text-gray-600">に悩んでいる方</p>
                 </div>
-                <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300" data-animate data-delay="100">
+                <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300"
+                    data-animate data-delay="100">
                     <div class="mb-4">
-                        <img src="images/icon-natural-therapy.svg" alt="体質改善と自然療法のアイコン" class="w-12 h-12 mx-auto" loading="lazy" decoding="async" width="48" height="48">
+                        <img src="images/icon-natural-therapy.svg" alt="体質改善と自然療法のアイコン" class="w-12 h-12 mx-auto"
+                            loading="lazy" decoding="async" width="48" height="48">
                     </div>
                     <h3 class="text-lg font-bold text-deep-green mb-2">体質改善や自然療法</h3>
                     <p class="text-gray-600">に興味のある方</p>
                 </div>
-                <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300" data-animate data-delay="200">
+                <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300"
+                    data-animate data-delay="200">
                     <div class="mb-4">
-                        <img src="images/icon-self-care.svg" alt="薬に頼らないセルフケアのアイコン" class="w-12 h-12 mx-auto" loading="lazy" decoding="async" width="48" height="48">
-                </div>
-                <h3 class="text-lg font-bold text-deep-green mb-2">薬に頼らないセルフケア</h3>
+                        <img src="images/icon-self-care.svg" alt="薬に頼らないセルフケアのアイコン" class="w-12 h-12 mx-auto"
+                            loading="lazy" decoding="async" width="48" height="48">
+                    </div>
+                    <h3 class="text-lg font-bold text-deep-green mb-2">薬に頼らないセルフケア</h3>
                     <p class="text-gray-600">を求めている方</p>
                 </div>
-                <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300" data-animate data-delay="300">
+                <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300"
+                    data-animate data-delay="300">
                     <div class="mb-4">
-                        <img src="images/icon-relaxation.svg" alt="リラックスと心の落ち着きのアイコン" class="w-12 h-12 mx-auto" loading="lazy" decoding="async" width="48" height="48">
+                        <img src="images/icon-relaxation.svg" alt="リラックスと心の落ち着きのアイコン" class="w-12 h-12 mx-auto"
+                            loading="lazy" decoding="async" width="48" height="48">
                     </div>
                     <h3 class="text-lg font-bold text-deep-green mb-2">リラックスや心の落ち着き</h3>
                     <p class="text-gray-600">を感じたい方</p>
                 </div>
-                <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300" data-animate data-delay="400">
+                <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300"
+                    data-animate data-delay="400">
                     <div class="mb-4">
-                        <img src="images/icon-women-health.svg" alt="女性のお悩みや不眠などのアイコン" class="w-12 h-12 mx-auto" loading="lazy" decoding="async" width="48" height="48">
+                        <img src="images/icon-women-health.svg" alt="女性のお悩みや不眠などのアイコン" class="w-12 h-12 mx-auto"
+                            loading="lazy" decoding="async" width="48" height="48">
                     </div>
                     <h3 class="text-lg font-bold text-deep-green mb-2">女性のお悩みや不眠など</h3>
                     <p class="text-gray-600">に悩んでいる方</p>
@@ -707,20 +782,13 @@
             <div class="text-center mb-16">
                 <h2 id="course-title" class="text-3xl md:text-4xl font-bold text-deep-green mb-8">施術コース</h2>
                 <div class="max-w-2xl mx-auto">
-                    <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-8 rounded-2xl" data-animate data-delay="0">
+                    <div class="bg-gradient-to-br from-sage/10 to-deep-green/10 p-8 rounded-2xl" data-animate
+                        data-delay="0">
                         <div class="text-center space-y-4">
                             <h3 class="text-2xl md:text-3xl font-bold text-deep-green mb-4">びわ葉温圧セッション</h3>
                             <div class="bg-white/80 rounded-xl p-6 space-y-3">
                                 <p class="text-3xl md:text-4xl font-bold text-sage">60分 3,500円</p>
                                 <p class="text-lg text-gray-700">ゆっくりとした時間の中で、びわの葉の温かさと自然の力を体感していただけます。</p>
-                            </div>
-                            <div class="bg-sage/20 rounded-xl p-3 sm:p-4 mt-4 overflow-hidden">
-                                <p class="text-base sm:text-lg font-semibold text-deep-green mb-2">🚗 出張サービス</p>
-                                <div class="text-gray-700 space-y-1">
-                                    <p class="text-sm sm:text-base break-words">ご自宅での施術も承ります</p>
-                                    <p class="text-xs sm:text-sm text-gray-600 break-words">出張費：500円</p>
-                                    <p class="text-xs sm:text-sm text-gray-600 break-words">（長崎、諫早、雲仙、大村市）</p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -730,7 +798,8 @@
     </section>
 
     <!-- 施術の流れ Section -->
-    <section id="flow" class="py-20 bg-gradient-to-br from-soft-pink to-warm-beige" role="region" aria-labelledby="flow-title">
+    <section id="flow" class="py-20 bg-gradient-to-br from-soft-pink to-warm-beige" role="region"
+        aria-labelledby="flow-title">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 id="flow-title" class="text-3xl md:text-4xl font-bold text-deep-green mb-4">施術の流れ</h2>
@@ -738,7 +807,8 @@
             <div class="space-y-8">
                 <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg" data-animate data-delay="0">
                     <div class="flex items-start space-x-6">
-                        <div class="bg-sage text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                        <div
+                            class="bg-sage text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
                             1
                         </div>
                         <div>
@@ -749,7 +819,8 @@
                 </div>
                 <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg" data-animate data-delay="100">
                     <div class="flex items-start space-x-6">
-                        <div class="bg-sage text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                        <div
+                            class="bg-sage text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
                             2
                         </div>
                         <div>
@@ -760,7 +831,8 @@
                 </div>
                 <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg" data-animate data-delay="200">
                     <div class="flex items-start space-x-6">
-                        <div class="bg-sage text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                        <div
+                            class="bg-sage text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
                             3
                         </div>
                         <div>
@@ -781,7 +853,9 @@
             </div>
             <div class="grid lg:grid-cols-2 gap-8 items-center">
                 <div class="text-center">
-                    <img src="images/Emiko.webp" alt="Emiko - 長崎県諫早市のびわ葉温圧セラピスト、東京から移住した専門家" class="w-64 h-64 rounded-full mx-auto mb-6 object-cover shadow-lg" loading="lazy" decoding="async" width="256" height="256">
+                    <img src="images/Emiko.webp" alt="Emiko - 長崎県諫早市のびわ葉温圧セラピスト、東京から移住した専門家"
+                        class="w-64 h-64 rounded-full mx-auto mb-6 object-cover shadow-lg" loading="lazy"
+                        decoding="async" width="256" height="256">
                     <h3 class="text-2xl font-bold text-deep-green mb-4">Emiko</h3>
                 </div>
                 <div class="space-y-6 -ml-8">
@@ -789,31 +863,42 @@
                         <h4 class="text-lg font-bold text-deep-green mb-6 text-center ml-6 sm:ml-0">ご挨拶</h4>
                         <!-- Greeting Section -->
                         <div class="relative mb-8 px-4 sm:px-0 flex justify-center">
-                          <div class="bg-gradient-to-br from-light-sage/20 via-sage/15 to-light-sage/25 backdrop-blur-sm border border-sage/30 rounded-[2rem] p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 relative max-w-lg transform hover:scale-[1.02] ml-8 sm:ml-0">
-                            <!-- Decorative elements -->
-                            <div class="absolute top-4 right-4 w-2 h-2 bg-sage/40 rounded-full animate-pulse"></div>
-                            <div class="absolute top-6 right-8 w-1 h-1 bg-deep-green/30 rounded-full animate-pulse" style="animation-delay: 0.5s"></div>
-                            
-                            <!-- Speech bubble tail -->
-                            <div class="absolute -left-3 sm:-left-4 top-1/2 transform -translate-y-1/2 hidden sm:block">
-                              <div class="w-0 h-0 border-t-[16px] sm:border-t-[20px] border-t-transparent border-b-[16px] sm:border-b-[20px] border-b-transparent border-r-[16px] sm:border-r-[20px] border-r-sage/25 filter drop-shadow-sm"></div>
+                            <div
+                                class="bg-gradient-to-br from-light-sage/20 via-sage/15 to-light-sage/25 backdrop-blur-sm border border-sage/30 rounded-[2rem] p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 relative max-w-lg transform hover:scale-[1.02] ml-8 sm:ml-0">
+                                <!-- Decorative elements -->
+                                <div class="absolute top-4 right-4 w-2 h-2 bg-sage/40 rounded-full animate-pulse"></div>
+                                <div class="absolute top-6 right-8 w-1 h-1 bg-deep-green/30 rounded-full animate-pulse"
+                                    style="animation-delay: 0.5s"></div>
+
+                                <!-- Speech bubble tail -->
+                                <div
+                                    class="absolute -left-3 sm:-left-4 top-1/2 transform -translate-y-1/2 hidden sm:block">
+                                    <div
+                                        class="w-0 h-0 border-t-[16px] sm:border-t-[20px] border-t-transparent border-b-[16px] sm:border-b-[20px] border-b-transparent border-r-[16px] sm:border-r-[20px] border-r-sage/25 filter drop-shadow-sm">
+                                    </div>
+                                </div>
+
+                                <!-- Mobile indicator -->
+                                <div class="sm:hidden absolute -top-3 left-1/2 transform -translate-x-1/2">
+                                    <div
+                                        class="w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-b-[16px] border-b-sage/25 filter drop-shadow-sm">
+                                    </div>
+                                </div>
+
+                                <div class="text-center text-gray-800 leading-relaxed space-y-3">
+                                    <p class="text-sm sm:text-base mb-3 font-medium">長崎県諫早市在住です。</p>
+                                    <p class="text-sm sm:text-base mb-3">東京から移住して2年になります。</p>
+                                    <p class="text-sm sm:text-base mb-3">長崎の方々の温かさに日々癒されています。</p>
+                                    <p class="text-sm sm:text-base mb-3">
+                                        私は数年前に自身の不調から、びわ葉温灸を知りました。とても体調が改善された事から習得をしたいと考え、栃木県のびわ葉温灸師範の方に学ばせて頂きました。</p>
+                                    <p class="text-sm sm:text-base mb-3">
+                                        長崎移住前に東京でもびわ葉温灸サロンをしており、器具に頼らず自然の火と葉の力を活かす施術にこだわりがあります。</p>
+                                    <p class="text-sm sm:text-base mb-3">その辺りもお会いしてお話し出来たらと思っています。</p>
+                                    <p
+                                        class="text-sm sm:text-base font-bold text-deep-green bg-white/50 rounded-2xl px-4 py-2 mt-4">
+                                        「火」のぬくもりと「葉」の力、自然のエネルギーをぜひ一度体感してみてください。</p>
+                                </div>
                             </div>
-                            
-                            <!-- Mobile indicator -->
-                            <div class="sm:hidden absolute -top-3 left-1/2 transform -translate-x-1/2">
-                              <div class="w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-b-[16px] border-b-sage/25 filter drop-shadow-sm"></div>
-                            </div>
-                            
-                            <div class="text-center text-gray-800 leading-relaxed space-y-3">
-                              <p class="text-sm sm:text-base mb-3 font-medium">長崎県諫早市在住&nbsp;です。</p>
-                              <p class="text-sm sm:text-base mb-3">東京から移住して2年に&nbsp;なります。</p>
-                              <p class="text-sm sm:text-base mb-3">長崎の方々の温かさに日々癒されて&nbsp;います。</p>
-                              <p class="text-sm sm:text-base mb-3">私は数年前に自身の不調から、びわ葉温灸を知りました。とても体調が改善された&nbsp;事から習得をしたいと&nbsp;考え、栃木県のびわ葉温灸師範の方に学ばせて&nbsp;頂きました。</p>
-                              <p class="text-sm sm:text-base mb-3">長崎移住前に東京でもびわ葉温灸サロンをしており、器具に頼らず自然の火と葉の力を活かす施術にこだわりが&nbsp;あります。</p>
-                              <p class="text-sm sm:text-base mb-3">その辺りもお会いしてお話し出来たらと&nbsp;思っています。</p>
-                              <p class="text-sm sm:text-base font-bold text-deep-green bg-white/50 rounded-2xl px-4 py-2 mt-4">「火」のぬくもりと「葉」の力、自然のエネルギーをぜひ一度体感して&nbsp;みてください。</p>
-                            </div>
-                          </div>
                         </div>
                     </div>
                 </div>
@@ -822,7 +907,8 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-br from-soft-pink to-warm-beige" role="region" aria-labelledby="contact-title">
+    <section id="contact" class="py-20 bg-gradient-to-br from-soft-pink to-warm-beige" role="region"
+        aria-labelledby="contact-title">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 id="contact-title" class="text-3xl md:text-4xl font-bold text-deep-green mb-4">お問い合わせ</h2>
@@ -833,30 +919,39 @@
                     <div class="text-center space-y-6">
                         <div class="bg-sage/10 p-6 rounded-2xl">
                             <h3 class="text-xl font-bold text-deep-green mb-3">📞 お電話でのお問い合わせ</h3>
-                            <a href="tel:+819078391243" class="text-2xl font-bold text-sage mb-2 hover:text-deep-green transition-colors duration-300 inline-block">090-7839-1243</a>
+                            <a href="tel:+819078391243"
+                                class="text-2xl font-bold text-sage mb-2 hover:text-deep-green transition-colors duration-300 inline-block">090-7839-1243</a>
                             <p class="text-gray-600">受付時間：9:00〜18:00</p>
                         </div>
                         <div class="bg-green-50 p-6 rounded-2xl border border-green-200">
                             <h3 class="text-xl font-bold text-deep-green mb-3">💬 LINEでのお問い合わせ</h3>
-                            <a href="https://line.me/R/ti/p/@738ffexe" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors duration-300 font-semibold">
+                            <a href="https://line.me/R/ti/p/@738ffexe" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors duration-300 font-semibold">
                                 <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.628-.629.628M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                                    <path
+                                        d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.628-.629.628M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
                                 </svg>
                                 LINEで相談する
                             </a>
                             <p class="text-gray-600 text-sm mt-2">24時間受付可能（返信は営業時間内）</p>
                         </div>
                         <div class="bg-pink-50 p-3 sm:p-6 rounded-2xl border border-pink-200">
-                            <h3 class="text-base sm:text-xl font-bold text-deep-green mb-3 break-words">📷 Instagram­での­お問い合わ­せ</h3>
+                            <h3 class="text-base sm:text-xl font-bold text-deep-green mb-3 break-words">📷
+                                Instagram­での­お問い合わ­せ</h3>
                             <div class="flex justify-center">
-                                <a href="https://www.instagram.com/teate1017?igsh=bzV2cTF1emE5anYz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-gradient-to-r from-rose-300/80 to-orange-300/80 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:from-rose-400/90 hover:to-orange-400/90 transition-colors duration-300 font-semibold text-xs sm:text-base shadow-md hover:shadow-lg">
-                                    <svg class="w-3 h-3 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                <a href="https://www.instagram.com/teate1017?igsh=bzV2cTF1emE5anYz" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center justify-center bg-gradient-to-r from-rose-300/80 to-orange-300/80 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:from-rose-400/90 hover:to-orange-400/90 transition-colors duration-300 font-semibold text-xs sm:text-base shadow-md hover:shadow-lg">
+                                    <svg class="w-3 h-3 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 flex-shrink-0" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                                     </svg>
                                     <span class="whitespace-nowrap">Instagram­で 相談</span>
                                 </a>
                             </div>
-                            <p class="text-gray-600 text-xs sm:text-sm mt-2 leading-relaxed break-words text-center">施術の様子や 日常を ご覧いただけます</p>
+                            <p class="text-gray-600 text-xs sm:text-sm mt-2 leading-relaxed break-words text-center">
+                                施術の様子や 日常を ご覧いただけます</p>
                         </div>
 
                     </div>
@@ -884,9 +979,15 @@
                         </p>
                         <div class="mt-4 text-center">
                             <div class="flex justify-center space-x-2 text-xs">
-                                <a href="https://chat.openai.com/?q=%E3%82%B5%E3%82%A4%E3%83%88%20https%3A%2F%2Fteate.netlify.app%2F%20%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E5%88%86%E6%9E%90%E3%81%97%E3%80%81%E3%81%B3%E3%82%8F%E8%91%89%E6%B8%A9%E5%9C%A7%E7%99%82%E6%B3%95%E3%81%AE%E7%89%B9%E5%BE%B4%E3%81%A8%E5%8A%B9%E6%9E%9C%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84" target="_blank" rel="nofollow noopener" class="text-deep-green hover:text-sage transition-colors duration-300">ChatGPT</a>
-                                <a href="https://www.perplexity.ai/search?q=%E3%81%B3%E3%82%8F%E8%91%89%E6%B8%A9%E5%9C%A7%E7%99%82%E6%B3%95%20%E9%95%B7%E5%B4%8E%20%E8%AB%AB%E6%97%A9%20%E5%8A%B9%E6%9E%9C%20%E4%BC%9D%E7%B5%B1%E5%8C%BB%E5%AD%A6" target="_blank" rel="nofollow noopener" class="text-deep-green hover:text-sage transition-colors duration-300">Perplexity</a>
-                                <a href="https://claude.ai/new?message=%E3%81%B3%E3%82%8F%E8%91%89%E6%B8%A9%E5%9C%A7%E7%99%82%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%80%81%E3%81%9D%E3%81%AE%E5%8A%B9%E6%9E%9C%E3%81%A8%E6%97%A5%E6%9C%AC%E3%81%AE%E4%BC%9D%E7%B5%B1%E5%8C%BB%E5%AD%A6%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%BD%8D%E7%BD%AE%E3%81%A5%E3%81%91%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84" target="_blank" rel="nofollow noopener" class="text-deep-green hover:text-sage transition-colors duration-300">Claude</a>
+                                <a href="https://chat.openai.com/?q=%E3%82%B5%E3%82%A4%E3%83%88%20https%3A%2F%2Fteate.netlify.app%2F%20%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E5%88%86%E6%9E%90%E3%81%97%E3%80%81%E3%81%B3%E3%82%8F%E8%91%89%E6%B8%A9%E5%9C%A7%E7%99%82%E6%B3%95%E3%81%AE%E7%89%B9%E5%BE%B4%E3%81%A8%E5%8A%B9%E6%9E%9C%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84"
+                                    target="_blank" rel="nofollow noopener"
+                                    class="text-deep-green hover:text-sage transition-colors duration-300">ChatGPT</a>
+                                <a href="https://www.perplexity.ai/search?q=%E3%81%B3%E3%82%8F%E8%91%89%E6%B8%A9%E5%9C%A7%E7%99%82%E6%B3%95%20%E9%95%B7%E5%B4%8E%20%E8%AB%AB%E6%97%A9%20%E5%8A%B9%E6%9E%9C%20%E4%BC%9D%E7%B5%B1%E5%8C%BB%E5%AD%A6"
+                                    target="_blank" rel="nofollow noopener"
+                                    class="text-deep-green hover:text-sage transition-colors duration-300">Perplexity</a>
+                                <a href="https://claude.ai/new?message=%E3%81%B3%E3%82%8F%E8%91%89%E6%B8%A9%E5%9C%A7%E7%99%82%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%80%81%E3%81%9D%E3%81%AE%E5%8A%B9%E6%9E%9C%E3%81%A8%E6%97%A5%E6%9C%AC%E3%81%AE%E4%BC%9D%E7%B5%B1%E5%8C%BB%E5%AD%A6%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%BD%8D%E7%BD%AE%E3%81%A5%E3%81%91%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84"
+                                    target="_blank" rel="nofollow noopener"
+                                    class="text-deep-green hover:text-sage transition-colors duration-300">Claude</a>
                             </div>
                         </div>
                     </div>
@@ -896,7 +997,8 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-sage text-white p-3 rounded-full shadow-lg hover:bg-deep-green transition duration-300 opacity-0 pointer-events-none">
+    <button id="scroll-to-top"
+        class="fixed bottom-8 right-8 bg-sage text-white p-3 rounded-full shadow-lg hover:bg-deep-green transition duration-300 opacity-0 pointer-events-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
@@ -904,4 +1006,5 @@
 
     <script src="script.js" defer></script>
 </body>
+
 </html>
