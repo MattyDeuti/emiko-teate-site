@@ -7,4 +7,4 @@ Disallow: /.netlify/
 Disallow: /ai-summary.json
 
 # Sitemap (URL mise à jour)
-Sitemap: https://teate-biwa.jp/sitemap.xml
+Sitemap: https://teate.netlify.app/sitemap.xml
